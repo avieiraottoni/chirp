@@ -17,7 +17,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Chirp::class);
     }
-        
+
+
     /**
      * The attributes that are mass assignable.
      *
