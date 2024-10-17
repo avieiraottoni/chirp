@@ -9,15 +9,6 @@ use Illuminate\Http\RedirectResponse;
 
 class ChirpController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    // public function index(): Response
-    // {
-    //     //
-    //     return response('<h1>HELLO WORLD!</h1>');
-    // }
-
     public function index(){
         return view('chirps.index');
     }
