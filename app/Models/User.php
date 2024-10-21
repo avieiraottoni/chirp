@@ -13,12 +13,6 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    public function chirps(): HasMany
-    {
-        return $this->hasMany(Chirp::class);
-    }
-
-
     /**
      * The attributes that are mass assignable.
      *
@@ -51,5 +45,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function chirps(): HasMany
+    {
+        return $this->hasMany(Chirp::class);
     }
 }
